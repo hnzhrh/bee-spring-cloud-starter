@@ -12,6 +12,7 @@
         <module>bee-spring-cloud-alibaba-starter</module>
         <module>bee-knife4j-spring-boot-starter</module>
         <module>bee-mybatis-plus-starter</module>
+        <module>bee-common-base</module>
     </modules>
 
     <parent>
@@ -29,9 +30,11 @@
         <knife4j-spring-boot-starter.version>2.0.9</knife4j-spring-boot-starter.version>
         <mybatis-plus-boot-starter.version>3.5.2</mybatis-plus-boot-starter.version>
         <org.freemarker.version>2.3.31</org.freemarker.version>
+        <hutool-all.version>5.8.10</hutool-all.version>
         <bee-spring-cloud-alibaba.version>1.0-SNAPSHOT</bee-spring-cloud-alibaba.version>
         <bee-knife4j-spring-boot-starter.version>1.0-SNAPSHOT</bee-knife4j-spring-boot-starter.version>
         <bee-mybatis-plus-starter.version>1.0-SNAPSHOT</bee-mybatis-plus-starter.version>
+        <bee-common-base.version>1.0-SNAPSHOT</bee-common-base.version>
 
 
     </properties>
@@ -41,6 +44,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -60,6 +68,11 @@
                 <groupId>com.hnzhrh</groupId>
                 <artifactId>bee-mybatis-plus-starter</artifactId>
                 <version>${bee-mybatis-plus-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hnzhrh</groupId>
+                <artifactId>bee-common-base</artifactId>
+                <version>${bee-common-base.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -111,6 +124,11 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-extension</artifactId>
                 <version>${mybatis-plus-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool-all.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
