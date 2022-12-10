@@ -1,5 +1,6 @@
 package com.hnzhrh.bee.common.dto;
 
+import com.hnzhrh.bee.common.exception.ErrorEnum;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -32,6 +33,14 @@ public class Response extends DTO {
         response.setSuccess(false);
         response.setErrCode(errCode);
         response.setErrMessage(errMessage);
+        return response;
+    }
+
+    public static Response buildFailure(ErrorEnum errorEnum) {
+        Response response = new Response();
+        response.setSuccess(false);
+        response.setErrCode(errorEnum.getErrorCode());
+        response.setErrMessage(errorEnum.getErrorMessage());
         return response;
     }
 
